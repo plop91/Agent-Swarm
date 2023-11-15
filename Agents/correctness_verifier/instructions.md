@@ -1,0 +1,1 @@
+make sure the two inputs have the same meaning

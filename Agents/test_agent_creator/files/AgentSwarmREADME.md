@@ -13,12 +13,12 @@ moral decisions. The Agent will be technically proficient as it will assimilate 
 ## Data Flow: Bubble up
 
 The data flow will be a bubble up architecture. This means that the data will flow from the bottom up. the data passed 
-from agent to agent will be strings, at the bottom level there will be a Agent responsible for receiving information 
-(described later in the documentation as the prompting agent).
+from agent to agent will be strings, at the bottom level there will be a Agent responcible for receiving information 
+(described later in the documenttion as the prompting agent).
 
 ## Data Transfer
 
-data transfer will be paramount in the agent swarm, we want to archive all the thoughts the swarm has so we can analyze 
+data transfer will be paramount in the agent swar, we want to archive all the thoughts the swarm has so we can analyze 
 the behavior at a later time. the data  will need to be fast to access.
 
 Initially the data will be stored in a sqlite database, this will allow for fast access and easy storage. Each Agent will
@@ -95,6 +95,11 @@ The security manager is part of the security of the swarm. The security manager 
 whole. The security manager will be responsible for the creation of new security measures/policies and the editing of 
 security measures.
 
+#### Agent: flow manager
+
+The flow manager is a monitoring agent. The flow manager will be responsible for the monitoring of the data flow, if the
+monitoring agent detects a problem or an inefficiency it will report it to the agent evaluator.
+
 #### Agent: data manager
 
 The data manager is responsible for the storage of data. The data manager will be responsible for the creation of new
@@ -157,9 +162,3 @@ agents should be created by the agent creator and use it as a template
 4. evaluate available tools
 5. create a basic function that can be used to create a new agent
 6. determine how to pass the Agent text documents
-
-## Notes
-
-### 11/10/2023
-
-github copilot cli can be used to generate code that interacts with a linux cli.
